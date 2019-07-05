@@ -1,0 +1,40 @@
+#!/bin/bash
+
+if [ -z "$1" ]
+then
+    echo "no source folder"
+elif [ -z "$2" ]
+then
+    echo "no target folder"
+else    
+    if [ -d "$2"/src/main/res/drawable-mdpi ]; then
+        echo "copy to drawable-mdpi"
+        mv "$1"/drawable-mdpi/* "$2"/src/main/res/drawable-mdpi/
+    else
+        echo "drawable-mdpi is not exist"
+    fi
+
+    if [ -d "$2"/src/main/res/drawable-hdpi ]; then
+        echo "copy to drawable-hdpi"
+        mv "$1"/drawable-hdpi/* "$2"/src/main/res/drawable-hdpi/
+    else
+        echo "drawable-hdpi is not exist"
+    fi
+
+    if [ -d "$2"/src/main/res/drawable-xhdpi ]; then
+        echo "copy to drawable-xhdpi"
+        mv "$1"/drawable-xhdpi/* "$2"/src/main/res/drawable-xhdpi/
+    else
+        echo "drawable-xhdpi is not exist"
+    fi
+
+    if [ -d "$2"/src/main/res/drawable-xxhdpi ]; then
+        echo "copy to drawable-xxhdpi"
+        mv "$1"/drawable-xxhdpi/* "$2"/src/main/res/drawable-xxhdpi/
+    else
+        echo "drawable-xxhdpi is not exist"
+    fi
+
+fi
+
+#mv /path/to/source /path/to/destination

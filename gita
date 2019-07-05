@@ -1,0 +1,24 @@
+#!/bin/bash
+
+if [ -z "$1" ]
+then 
+    git add dcard/*
+    git reset HEAD dcard/build.gradle
+    git reset HEAD dcard/src/main/java/com/sparkslab/dcardreader/DcardApplication.kt
+    git reset HEAD dcard/src/main/java/com/sparkslab/dcardreader/module/api/dcard/DcardApiStation.kt
+elif [ "$1" = "-a" ]
+then
+    git add dcard/*
+elif [ "$1" = "-s" ]
+then
+    git add dcard/src/main/java/com/sparkslab/dcardreader/screen/*
+elif [ "$1" = "-r" ]
+then
+   git add dcard/src/main/res/*
+elif [ "$1" = "-m" ]
+then
+    git add dcard/src/main/java/com/sparkslab/dcardreader/module/*
+else
+    echo "Do nothing..."
+fi
+git status
