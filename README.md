@@ -25,3 +25,6 @@ Right now just support `Dcard Project`
 > git commit
 - `args`: your commit message
 
+# Reference
+- [How to Create and Use Bash Scripts](https://www.taniarascia.com/how-to-create-and-use-bash-scripts/)
+- [Writing Your First Script and Getting It to Work](http://linuxcommand.org/lc3_wss0010.php)
