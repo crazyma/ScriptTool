@@ -1,0 +1,40 @@
+#!/bin/bash
+
+# for entry in "$search_dir/"*
+# do
+#   echo "$entry"
+# done
+
+
+walk_dir () {
+    shopt -s nullglob dotglob
+
+    for pathname in "$1"/*; do
+        if [ -d "$pathname" ]; then
+            walk_dir "$pathname"
+        else
+            printf '%s\n' "$pathname"
+        fi
+    done
+}
+
+DOWNLOADING_DIR=/Users/
+
+walk_dir "$DOWNLOADING_DIR"
+
+# echo "Starting Script..."
+
+# for FILE in $DOWNLOADING_DIR/*
+# do
+#     if [ -d "$FILE" ]
+#     then
+#         echo "...Checking Directory "$FILE
+#         for DFILE in $FILE/*
+#         do
+#             echo "Found file(1) ... $DFILE"
+#         done
+#     else
+#         echo "Found file(2) ... $FILE"
+#         echo ""
+#     fi
+# done
