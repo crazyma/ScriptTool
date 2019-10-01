@@ -1,0 +1,3 @@
+#!/bin/bash
+
+slack file upload dcard/build/outputs/apk/staging/debug/dcard-staging-debug.apk 'daily-meeting-a'
