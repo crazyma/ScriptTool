@@ -3,18 +3,23 @@
 if [ -z "$1" ]
 then 
     echo "Do nothing..."
-elif [ "$1" = "-s" ]
+elif [ "$1" = "s" ]
 then
     echo "[git checkout dcard screen...]"
     git checkout -- dcard/src/main/java/com/sparkslab/dcardreader/screen/
-elif [ "$1" = "-r" ]
+elif [ "$1" = "r" ]
 then
    echo "[git checkout dcard res...]"
    git checkout -- dcard/src/main/res/
-elif [ "$1" = "-m" ]
+elif [ "$1" = "m" ]
 then
     echo "[git checkout dcard module...]"
     git checkout -- dcard/src/main/java/com/sparkslab/dcardreader/module/*
+elif [ "$1" = "i" ]
+then
+    echo "[git checkout .idea ...]"
+    git checkout -- .idea/codeStyles/Project.xml
+    git checkout -- .idea/modules.xml
 else
     echo "Do nothing..."
 fi
