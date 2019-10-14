@@ -23,3 +23,4 @@ then
 else
     echo "Do nothing..."
 fi
+git status
