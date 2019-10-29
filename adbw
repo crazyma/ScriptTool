@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [ -z "$1" ]
+then 
+    echo "Nothing happened ..."
+else
+    adb tcpip 1105
+    adb connect "$1":1105
+fi
