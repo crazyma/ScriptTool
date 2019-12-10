@@ -4,7 +4,7 @@ Right now just support `Dcard Project`
 
 ## gita [arg] 
 > git add
-- ` `: add all file but Stetho-related files
+- ` `: add all file but testing code
 - `-a`: add all dcard files
 - `-s`: add dcard screen files
 - `-r`: add dcard resrouces files
