@@ -1,0 +1,22 @@
+#!/bin/bash
+
+if [ -z "$1" ]
+then
+    echo "Do nothing ..."
+else
+    adb shell input tap 800 800
+    if [ "$1" = "zone" ]
+    then
+        adb shell input text "440020372@ntunhs.edu.tw"
+        adb shell input keyevent KEYCODE_ENTER
+        adb shell input text "gggggggg"
+        adb shell input keyevent KEYCODE_ENTER
+    elif [[ "$1" == *badu* ]]
+    then
+        adb shell input text "$1@dcard.cc"
+        adb shell input keyevent KEYCODE_ENTER
+        adb shell input text "badubadu"
+        adb shell input keyevent KEYCODE_ENTER
+    fi
+    adb shell input tap 100 1200
+fi
