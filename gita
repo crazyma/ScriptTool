@@ -6,8 +6,7 @@ then
     git reset HEAD build.gradle
     git reset HEAD dcard/build.gradle
     git reset HEAD dcard/src/main/java/com/sparkslab/dcardreader/DcardApplication.kt
-    git reset HEAD dcard/src/main/java/com/sparkslab/dcardreader/module/api/dcard/OkHttpClientUtils.kt
-    git reset HEAD dcard/src/main/java/com/sparkslab/dcardreader/module/api/FileProgressRequestBody.kt
+    git reset HEAD dcard/src/main/java/com/sparkslab/dcardreader/screen/splash/SplashActivity.kt
 elif [ "$1" = "-a" ]
 then
     git add dcard/*
