@@ -4,9 +4,11 @@ if [ -z "$1" ]
 then 
     git add dcard/*
     git add model/*
+    git add common-ui/*
     git reset HEAD build.gradle
     git reset HEAD dcard/build.gradle
     git reset HEAD model/build.gradle
+    git reset HEAD common-ui/build.gradle
     git reset HEAD dcard/src/main/AndroidManifest.xml
     git reset HEAD dcard/src/main/java/com/sparkslab/dcardreader/DcardApplication.kt
     git reset HEAD dcard/src/main/java/com/sparkslab/dcardreader/screen/splash/SplashActivity.kt
