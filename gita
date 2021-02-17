@@ -5,6 +5,7 @@ then
     git add dcard/*
     git add model/*
     git add common-ui/*
+    git add feature/*
     git reset HEAD build.gradle
     git reset HEAD dcard/build.gradle
     git reset HEAD model/build.gradle
