@@ -5,15 +5,15 @@ then
     git add dcard/*
     git add model/*
     git add common-ui/*
-    git add feature/*
+    git add features/*
     git reset HEAD build.gradle
-    git reset HEAD dcard/build.gradle
-    git reset HEAD model/build.gradle
-    git reset HEAD common-ui/build.gradle
+    git reset HEAD */build.gradle
+    git reset HEAD */*/build.gradle
     git reset HEAD dcard/src/main/AndroidManifest.xml
     git reset HEAD dcard/src/main/java/com/sparkslab/dcardreader/DcardApplication.kt
     git reset HEAD dcard/src/main/java/com/sparkslab/dcardreader/screen/splash/SplashActivity.kt
     git reset HEAD dcard/src/main/java/com/sparkslab/dcardreader/screen/main/MainActivity.kt
+    git reset HEAD dcard/src/main/res/layout
 elif [ "$1" = "-a" ]
 then
     git add dcard/*
