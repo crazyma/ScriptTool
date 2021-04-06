@@ -13,6 +13,7 @@ then
     git reset HEAD dcard/src/main/java/com/sparkslab/dcardreader/DcardApplication.kt
     git reset HEAD dcard/src/main/java/com/sparkslab/dcardreader/screen/splash/SplashActivity.kt
     git reset HEAD dcard/src/main/java/com/sparkslab/dcardreader/screen/main/MainActivity.kt
+    git reset HEAD dcard/src/main/res/layout
 elif [ "$1" = "-a" ]
 then
     git add dcard/*
