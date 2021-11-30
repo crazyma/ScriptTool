@@ -11,6 +11,12 @@ else
         adb shell input keyevent KEYCODE_ENTER
         adb shell input text "gggggggg"
         adb shell input keyevent KEYCODE_ENTER
+    elif [ "$1" = "david"  ]
+    then
+        adb shell input text "david77115@gmail.com"
+        adb shell input keyevent KEYCODE_ENTER
+        adb shell input text "batu05dcard"
+        adb shell input keyevent KEYCODE_ENTER
     elif [ "$1" = "aangle" ]
     then
         adb shell input text "dcardandroid@dcard.tw"

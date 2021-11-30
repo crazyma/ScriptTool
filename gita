@@ -1,4 +1,4 @@
-#!/bin/bash
+i#!/bin/bash
 
 if [ -z "$1" ]
 then 
@@ -9,6 +9,9 @@ then
     git reset HEAD build.gradle
     git reset HEAD */build.gradle
     git reset HEAD */*/build.gradle
+    git reset HEAD build.gradle.kts
+    git reset HEAD */build.gradle.kts
+    git reset HEAD */*/build.gradle.kts
     git reset HEAD dcard/src/main/AndroidManifest.xml
     git reset HEAD dcard/src/main/java/com/sparkslab/dcardreader/DcardApplication.kt
     git reset HEAD dcard/src/main/java/com/sparkslab/dcardreader/screen/splash/SplashActivity.kt
