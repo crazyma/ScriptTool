@@ -8,27 +8,26 @@ else
     if [ "$1" = "zone" ]
     then
         adb shell input text "440020372@ntunhs.edu.tw"
-        adb shell input keyevent KEYCODE_ENTER
+        adb shell input keyevent KEYCODE_TAB
         adb shell input text "gggggggg"
-        adb shell input keyevent KEYCODE_ENTER
     elif [ "$1" = "david"  ]
     then
         adb shell input text "david77115@gmail.com"
-        adb shell input keyevent KEYCODE_ENTER
+        adb shell input keyevent KEYCODE_TAB
         adb shell input text "batu05dcard"
-        adb shell input keyevent KEYCODE_ENTER
     elif [ "$1" = "aangle" ]
     then
         adb shell input text "dcardandroid@dcard.tw"
-        adb shell input keyevent KEYCODE_ENTER
+        adb shell input keyevent KEYCODE_TAB
 	adb shell input text "95URRLpdtRhbMbh"
- 	adb shell input keyevent KEYCODE_ENTER
     elif [[ "$1" == *badu* ]]
     then
         adb shell input text "$1@dcard.cc"
-        adb shell input keyevent KEYCODE_ENTER
+        adb shell input keyevent KEYCODE_TAB
+        adb shell input keyevent KEYCODE_TAB
+        adb shell input keyevent KEYCODE_TAB
         adb shell input text "badubadu"
-        adb shell input keyevent KEYCODE_ENTER
     fi
-    adb shell input tap 100 1200
+    adb shell input keyevent KEYCODE_TAB
+    adb shell input keyevent KEYCODE_ENTER
 fi
