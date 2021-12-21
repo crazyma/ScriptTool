@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rm -rf ~/.gradle/caches/
+rm -rf ~/.gradle/wrapper/
