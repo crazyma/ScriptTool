@@ -2,7 +2,7 @@ i#!/bin/bash
 
 if [ -z "$1" ]
 then 
-    git add dcard/*
+    git add app/*
     git add model/*
     git add common-ui/*
     git add features/*
@@ -12,23 +12,23 @@ then
     git reset HEAD build.gradle.kts
     git reset HEAD */build.gradle.kts
     git reset HEAD */*/build.gradle.kts
-    git reset HEAD dcard/src/main/AndroidManifest.xml
-    git reset HEAD dcard/src/main/java/com/sparkslab/dcardreader/DcardApplication.kt
-    git reset HEAD dcard/src/main/java/com/sparkslab/dcardreader/screen/splash/SplashActivity.kt
-    git reset HEAD dcard/src/main/java/com/sparkslab/dcardreader/screen/main/MainActivity.kt
-    git reset HEAD dcard/src/main/res/layout
+    git reset HEAD app/src/main/AndroidManifest.xml
+    git reset HEAD app/src/main/java/com/sparkslab/dcardreader/DcardApplication.kt
+    git reset HEAD app/src/main/java/com/sparkslab/dcardreader/screen/splash/SplashActivity.kt
+    git reset HEAD app/src/main/java/com/sparkslab/dcardreader/screen/main/MainActivity.kt
+    git reset HEAD app/src/main/res/layout
 elif [ "$1" = "-a" ]
 then
     git add dcard/*
 elif [ "$1" = "-s" ]
 then
-    git add dcard/src/main/java/com/sparkslab/dcardreader/screen/*
+    git add app/src/main/java/com/sparkslab/dcardreader/screen/*
 elif [ "$1" = "-r" ]
 then
-   git add dcard/src/main/res/*
+   git add app/src/main/res/*
 elif [ "$1" = "-m" ]
 then
-    git add dcard/src/main/java/com/sparkslab/dcardreader/module/*
+    git add app/src/main/java/com/sparkslab/dcardreader/module/*
 else
     echo "Do nothing..."
 fi
