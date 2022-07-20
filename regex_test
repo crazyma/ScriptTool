@@ -1,0 +1,41 @@
+#!/bin/bash
+if [ -z "$1" ]
+then
+    echo "Do nothing ..."
+else
+    accountName=$1
+    regex='(.*)\+([0-9]+)$'
+    if [[ $accountName =~ $regex ]]
+    then
+        user=${BASH_REMATCH[1]}
+        if [[ $user = "giny" ]] || [[ $user = "benben" ]]
+        then
+            pw=${BASH_REMATCH[2]}
+            size=${#pw} 
+            if [[ $size -eq 3 ]]
+            then
+                echo "$accountName@dcard.cc"
+                echo "$pw$pw"
+            elif [[ $size -eq 2 ]]
+            then
+                echo "$accountName@dcard.cc"
+                echo "$pw$pw$pw"
+            elif [[ $size -eq 1 ]]
+            then
+                echo "$accountName@dcard.cc"
+                echo "$pw$pw$pw$pw$pw$pw"
+            else
+                echo "Can not organize the number: '$pw'"
+                exit 0
+            fi    
+        else
+            echo "Can not fetch the number from '$accountName'"
+            exit 0
+        fi
+        
+    else
+        echo "Can not fetch the number from '$accountName'"
+        exit 0
+    fi
+fi
+echo "-------------------"
