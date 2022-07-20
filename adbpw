@@ -35,6 +35,47 @@ else
         adb shell input tap 990 510
         adb shell input tap 990 510
         adb shell input text "badubadu"
+    else
+        accountName=$1
+        regex='(.*)\+([0-9]+)$'
+        if [[ $accountName =~ $regex ]]
+        then
+            user=${BASH_REMATCH[1]}
+            if [[ $user = "giny" ]] || [[ $user = "benben" ]]
+            then
+                pw=${BASH_REMATCH[2]}
+                size=${#pw} 
+                if [[ $size -eq 3 ]]
+                then
+                    adb shell input text "$accountName@dcard.cc"
+                    adb shell input tap 990 510
+                    adb shell input tap 990 510
+                    adb shell input text "$pw$pw"                
+                elif [[ $size -eq 2 ]]
+                then
+                    adb shell input text "$accountName@dcard.cc"
+                    adb shell input tap 990 510
+                    adb shell input tap 990 510
+                    adb shell input text "$pw$pw$pw"
+                elif [[ $size -eq 1 ]]
+                then
+                adb shell input text "$accountName@dcard.cc"
+                    adb shell input tap 990 510
+                    adb shell input tap 990 510
+                    adb shell input text "$pw$pw$pw$pw$pw$pw"            
+                else
+                    echo "Can not organize the number: '$pw'"
+                    exit 0
+                fi    
+            else
+                echo "Can not fetch the number from '$accountName'"
+                exit 0
+            fi
+            
+        else
+            echo "Can not fetch the number from '$accountName'"
+            exit 0
+        fi
     fi
     adb shell input keyevent KEYCODE_TAB
     adb shell input keyevent KEYCODE_ENTER
