@@ -2,10 +2,7 @@ i#!/bin/bash
 
 if [ -z "$1" ]
 then 
-    git add app/*
-    git add model/*
-    git add common-ui/*
-    git add features/*
+    git add *
     git reset HEAD build.gradle
     git reset HEAD */build.gradle
     git reset HEAD */*/build.gradle
@@ -17,6 +14,7 @@ then
     git reset HEAD app/src/main/java/com/sparkslab/dcardreader/screen/splash/SplashActivity.kt
     git reset HEAD app/src/main/java/com/sparkslab/dcardreader/screen/main/MainActivity.kt
     git reset HEAD app/src/main/res/layout
+    git reset HEAD app/google-services.json
 elif [ "$1" = "-a" ]
 then
     git add dcard/*
