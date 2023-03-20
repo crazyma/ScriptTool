@@ -1,5 +1,8 @@
 i#!/bin/bash
 
+fileName="/gita_ignore"
+ignoreFile=$(realpath "$(dirname "$0")")$fileName
+
 if [ -z "$1" ]
 then 
     git add *
@@ -15,6 +18,11 @@ then
     git reset HEAD app/src/main/java/com/sparkslab/dcardreader/screen/main/MainActivity.kt
     git reset HEAD app/src/main/res/layout
     git reset HEAD app/google-services.json
+
+    while read line
+    do
+        git reset HEAD $line
+    done < $ignoreFile
 elif [ "$1" = "-a" ]
 then
     git add dcard/*
@@ -31,3 +39,4 @@ else
     echo "Do nothing..."
 fi
 git status
+
