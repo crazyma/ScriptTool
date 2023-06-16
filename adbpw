@@ -11,6 +11,12 @@ else
         adb shell input tap 990 510
         adb shell input tap 990 510
         adb shell input text "gggggggg"
+    elif [ "$1" = "fantacy" ]
+    then
+        adb shell input text "fantasy@dcard.cc"
+        adb shell input tap 990 510
+        adb shell input tap 990 510
+        adb shell input text "pkjay123"
     elif [ "$1" = "dai" ]
     then 
         adb shell input text "daidoujichen@gmail.com"
