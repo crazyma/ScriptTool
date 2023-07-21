@@ -1,0 +1,7 @@
+#!/bin/bash
+if [ -z "$1" ]
+then 
+    /Users/batu/Library/Android/sdk/emulator/emulator -list-avds
+else
+    /Users/batu/Library/Android/sdk/emulator/emulator -avd "$1"
+fi
