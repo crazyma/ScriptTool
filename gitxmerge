@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# Get the name of the current branch
+current_branch=$(git symbolic-ref --short HEAD)
+
+# Get the name of the upstream branch for the current branch
+upstream_branch=$(git rev-parse --abbrev-ref @{upstream})
+
+# Get the common ancestor commit of the current branch and its upstream branch
+merge_base=$(git merge-base HEAD $upstream_branch)
+
+# Check if the current branch has an upstream branch
+if [ -z "$upstream_branch" ]; then
+  echo "Current branch doesn't have an upstream branch."
+  exit 1
+fi
+
+# Reverse all the local commits on the current branch
+while [ $(git rev-parse HEAD) != $merge_base ]; do
+    git reset --hard HEAD^
+done
+
+# Perform a fast-forward merge to update the current branch from its upstream branch
+git merge $upstream_branch
