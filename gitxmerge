@@ -3,6 +3,9 @@
 # Get the name of the current branch
 current_branch=$(git symbolic-ref --short HEAD)
 
+# set the upstream branch
+git branch -u origin/$current_branch
+
 # Get the name of the upstream branch for the current branch
 upstream_branch=$(git rev-parse --abbrev-ref @{upstream})
 
