@@ -16,7 +16,7 @@ then
     git reset HEAD app/src/main/java/com/sparkslab/dcardreader/DcardApplication.kt
     git reset HEAD app/src/main/java/com/sparkslab/dcardreader/screen/splash/SplashActivity.kt
     git reset HEAD app/src/main/java/com/sparkslab/dcardreader/screen/main/MainActivity.kt
-    git reset HEAD app/src/main/res/layout
+    git reset HEAD "*Config.kt"
     git reset HEAD app/google-services.json
 
     while read line
