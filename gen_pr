@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# 設定預設的比較分支
+DEFAULT_BRANCH="develop"
+
+# 解析命令列參數
+COMPARE_BRANCH="$DEFAULT_BRANCH"
+ARGS=()
+
+# 處理參數
+while [[ $# -gt 0 ]]; do
+    case $1 in
+        -b|--branch)
+            COMPARE_BRANCH="$2"
+            shift 2
+            ;;
+        *)
+            echo "❌ [ERROR] 不支援的參數: $1"
+            echo "用法: $0 [-b|--branch <branch_name>]"
+            exit 1
+            ;;
+    esac
+done
+
+# 顯示當前設定的比較分支
+echo "🔍 [INFO] 當前比較分支: $COMPARE_BRANCH"
+
+# 顯示即將執行的命令
+echo "🚀 [INFO] 執行命令: pr_desc_generator_v2.sh \"$COMPARE_BRANCH\""
+echo "─────────────────────────────────────────────────────"
+
+# 執行 pr_desc_generator_v2.sh，使用指定的分支和其他參數
+~/Workspace/Script/pr_desc_gen/pr_desc_generator_v2.sh "$COMPARE_BRANCH" -c --zh-tw
